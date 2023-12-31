@@ -4,6 +4,8 @@ services:
   dnsmasq:
     image: jpillora/dnsmasq
     container_name: dnsmasq
+    env_file:
+      - .env
     command: --conf-file=/etc/dnsmasq.conf
     volumes:
       - ./dnsmasq.conf:/etc/dnsmasq.conf
