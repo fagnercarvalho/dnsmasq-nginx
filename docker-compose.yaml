@@ -23,4 +23,4 @@ services:
     image: kennethreitz/httpbin
     container_name: mock-http-server
     ports:
-      - "8080:80"
+      - "8051:80"
