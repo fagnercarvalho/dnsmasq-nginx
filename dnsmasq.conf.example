@@ -1,4 +1,4 @@
 server=8.8.8.8
 server=8.8.4.4
 
-address=/local/${LOCAL_SERVER_IP}
+address=/local/<your server IP>
