@@ -1,4 +1,8 @@
+address=/local/<your server IP>
+
+no-resolv
+
 server=8.8.8.8
 server=8.8.4.4
 
-address=/local/<your server IP>
+log-queries
