@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  dnsmasq:
+    image: jpillora/dnsmasq
+    container_name: dnsmasq
+    command: --conf-file=/etc/dnsmasq.conf
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+
+  mock-http-server:
+    image: kennethreitz/httpbin
+    container_name: mock-http-server
+    ports:
+      - "8080:80"
