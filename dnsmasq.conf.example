@@ -7,4 +7,4 @@ server=8.8.4.4
 
 # this should only be enabled for troubleshooting
 # since it creates too many logs
-log-queries
+# log-queries
